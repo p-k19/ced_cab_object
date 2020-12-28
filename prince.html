@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="prince.css">
+  <script src="prince.js"></script>
+  <title>BOOK A RIDE</title>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md  bg-dark navbar-dark">
+    <a class="navbar-brand brand" href="#"><span class="ced">CED</span>&nbsp<span class="coss" style="color: white;">CAB</span></a>
+    <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#myNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse navbar-dark  " id="myNavbar">
+      <ul class="navbar-nav ml-auto mr-3 ht text-right">
+        <li class="nav-item">
+            <a class="nav-link pt-3 " style="color:yellow;" href="#">HOME</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link pt-3 " style="color:yellow;" href="#">FEATURES</a>
+          <section>
+            <div class="container">
+              <div class="row">
+              </div>
+          </section>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pt-3 " style="color:yellow;" href="#">LOGIN IN</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-success rounded-pill btn1 mt-1 ml-3" href="#">SIGN-UP</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <section>
+    <div class="conatiner-fluid img" style="height: 625px;">
+      <div class="text-center pt-5 mb-5 on">
+        <h1 class="head ">Book Your ride !!</h1>
+        <h2 class="head"><i>The One You Can Always Count On..++</i></h2>
+      </div>
+      <div>
+        <form action="#" class="ml-5 mr-5 pt-5" style="margin-top: -40px;" >
+          <div class="row mb-5 ">
+
+            <div class="col-lg-4 a">
+
+              <div class="text-center mt-2 ">
+                <span class="p-1 pr-2 pl-2 b mb-3">CAB++</span>
+
+                <h3 class=" mb-0 c mt-3">YOUR RIDE PARTNER!!</h3>
+               <br>
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <div class="input-group-text ">Pickup</div>
+                </div>
+                <select class="form-control " id="pick">
+                  <option selected value="cu">Pickup-location</option>
+                  <option value="Charbagh">Charbagh</option>
+                  <option value="Indira Nagar">Indira Nagar </option>
+                  <option value="BBD">BBD</option>
+                  <option value="Barabanki">Barabanki</option>
+                  <option value="Faizabad">Faizabad</option>
+                  <option value="Basti">Basti</option>
+                  <option value="Gorakhpur">Gorakhpur</option>
+                </select>
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <div class="input-group-text ">DROP</div>
+                </div>
+                <select class="form-control " id="drop">
+                  <option selected value="cu">Drop-location</option>
+                  <option value="Charbagh">Charbagh</option>
+                  <option value="Indira Nagar">Indira Nagar </option>
+                  <option value="BBD">BBD</option>
+                  <option value="Barabanki">Barabanki</option>
+                  <option value="Faizabad">Faizabad</option>
+                  <option value="Basti">Basti</option>
+                  <option value="Gorakhpur">Gorakhpur</option>
+                </select>
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <div class="input-group-text ">CAB-TYPE</div>
+                </div>
+                <select class="form-control " id="cab">
+                  <option value="cu">Choose your cab</option>
+                  <option value="CedMicro">CedMicro</option>
+                  <option value="CedMini">CedMini </option>
+                  <option value="CedRoyal">CedRoyal</option>
+                  <option value="CedSuv">CedSUV</option>
+                </select>
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <div class="input-group-text ">Luggage</div>
+                </div>
+                <input type="number" class="form-control" id="kg" placeholder="Enter Weight in KG">
+              </div>
+              <div class="input-group mb-3">
+                <a  class="btn btn-block btn" id="inlineFormInputGroup" value="">CALCULATE FARE</a>
+              </div>
+              <div class="input-group mb-3 res a" >
+                <span id="res"></span><br>
+               
+                
+              </div>
+
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4 text-center">
+        <div class="row">
+          <div class="col-sm-4"><i class="fa fa-taxi" style="font-size:50px;color:rgb(10, 10, 10);" aria-hidden="true"></i></div>
+          <div class="col-sm-4"><i class="fab fa-bike" style="font-size:50px;color:rgb(10, 10, 10);"></i></div>
+          <div class="col-sm-4"><i class="fab fa-car" style="font-size:50px;color:rgb(10, 10, 10);"></i></div>
+        </div>
+      </div>
+      <div class="col-sm-4 text-center">
+        <p>COPYRIGHT@</p>
+        
+      </div>
+      <div class="col-sm-4 text-center">
+        <div class="row">
+          <div class="col-sm-4"><a href="#">Features</a></div>
+          <div class="col-sm-4"><a href="#">Reviews</a></div>
+          <div class="col-sm-4"><a href="#">Sign-up</a></div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <footer>
+  <div class="container-fluid" style="height: auto;">
+      <div class="row">
+          
+          <div class="col-4 icon-color" style="padding-top: 20px;">
+              <i class="fa fa-instagram-square"  style="font-size:50px;color: white;" aria-hidden="true"></i>
+              <i class="fa fa-facebook-square"  style="font-size:50px;color: white;" aria-hidden="true"></i>
+              <i class="fa fa-twitter-squares"  style="font-size:50px;color: white;"></i>
+             
+          </div>
+          <div class="col-4 text-center">
+            
+                <p style="color: white;">COPYRIGHT@</p>
+                  <span class="logo-color" style="color: white;"><i>Ced-Cab</i></span>
+                  <span class="logo-color" style="color: white;"><i>@Prince.Kr.Yadav</i></span>
+                  <span style="color: white;"><i>2020-2021</i></span>
+                  
+              
+        
+          </div>
+          <!-- <div class="col-sm-4 text-center" style="padding-top: 20px;">
+            <i class="fa fa-instagram"           style="font-size:50px" aria-hidden="true"></i>
+            <i class="fa fa-facebook-square"  style="font-size:50px" aria-hidden="true"></i>
+            <i class="fa fa-twitter-square"  style="font-size:50px" aria-hidden="true"></i>
+            <i class="fa fa-linkedin-square"   style="font-size:50px" aria-hidden="true"></i>
+          </div> -->
+      </div>
+    
+  </div> 
+</footer>
+</body>
+</html>

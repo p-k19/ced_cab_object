@@ -1,0 +1,97 @@
+.img
+{
+    height:690px;
+    background-image:url(cab.jpeg);
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    background-position:center;
+}
+.ced,.coss
+{
+    font-size:larger;
+    text-shadow:2px 2px #067df33f
+}
+.a
+{
+    background-color:#f0fff0;
+    border-radius:5px;
+    color: #000;
+}
+.b
+{
+background-color:yellow;
+font-weight:bolder;
+font-size:13px;
+border-radius:10px;
+}
+.head
+{
+    color:yellow;
+    font-weight:bolder;
+    text-shadow:5px 5px rgb(150, 150, 79);
+}
+.c
+{
+    font-weight:700;
+    font-size:18px;
+}
+.d
+{
+font-size:16px;
+}
+.form-control
+{
+    background-color:white;
+    -webkit-appearance:none;
+}
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button
+{
+    -webkit-appearance:none;
+    margin:0;
+}
+input[type=number]
+{
+    -moz-appearance:textfield;
+}
+.form-control:focus{
+    box-shadow:none;
+    outline:none}
+    .input-group-text
+    {
+        font-size:10px;width:75px;
+    }
+    .btn
+    {
+        background-color:rgb(243, 243, 8);
+    }
+    .ced
+    {
+        color:yellow;
+        font-weight:700;
+    }
+    .coss
+    {
+        color:yellow;
+        font-weight:700;
+    }
+    .btn1
+    {
+        background-color:#9acd32;
+    }
+    @media only screen and (max-width:768px)
+    {
+        .on
+        {
+            display:none
+        }
+    }
+    .res
+    {color:#089c14;
+        font-weight:bolder;
+        text-shadow:5px 5px #5d69913f;
+        font-size:larger;
+    }
+    footer{
+        background-color:black;
+    }
+    
