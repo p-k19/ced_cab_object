@@ -2,14 +2,14 @@
 
  class cedcab{
        
-    function f1($pick,$drop,$cab){
+    function f1($pick,$drop,$cab){    //function f1 to be called by obejct 'obj'
  $this->pick1=$pick;
  $this->drop1=$drop;
  $this->cab1=$cab;
  
-    echo"\nPickUp:".$pick; 
-    echo"\nDrop:".$drop; 
-    echo"\nCab:".$cab; 
+    echo"\n<strong>PickUp:</strong>".$pick."<br>"; 
+    echo"\n<strong>Drop:</strong>".$drop."<br>"; 
+    echo"\n<strong>Cab:</strong>".$cab."<br>"; 
 
 
 
@@ -49,15 +49,15 @@ else {
         }
     }
  $distance =abs((int)$dd-(int)$pd);    
- echo "\nDistance:".$distance."Km";              //to get absolute distance between location 
+ echo "\n<strong>Distance:</strong>".$distance."Km"."<br>";              //to get absolute distance between location 
 
 
 
     switch ($cab) {
         case 'CedMicro':
 
-            // $obj6=new cedcab();
-            //       $obj6->micro($distance);
+             $obj6=new cedcab();
+                 $obj6->micro($distance);
             
             
             break;
@@ -245,10 +245,10 @@ else {
          $cost=(int)$cost+(int)$fixed;
 
              
-         echo "\nTotal Fare:"."Rs".$cost;
+        echo "\n<strong>Total Fare:</strong>"."Rs".$cost;
     }
     
-  //  echo "Total Fare:"."".$cost;
+  // echo "Total Fare:"."".$cost;
  }
          $pick=$_REQUEST['pick'];                                    
          $drop=$_REQUEST['drop'];               
