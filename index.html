@@ -19,6 +19,7 @@
 
 <body>
   <nav class="navbar navbar-expand-md  bg-dark navbar-dark">
+    <img src="car.jpeg" class="img-fluid" alt="Responsive image" style="height: 45px; width: 50px;">
     <a class="navbar-brand brand" href="#"><span class="ced">CED</span>&nbsp<span class="coss" style="color: white;">CAB</span></a>
     <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#myNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -46,13 +47,13 @@
     </div>
   </nav>
   <section>
-    <div class="conatiner-fluid img" style="height: 625px;">
+    <div class="conatiner-fluid img" style="height: 550px;">
       <div class="text-center pt-5 mb-5 on">
         <h1 class="head ">Book Your ride !!</h1>
         <h2 class="head"><i>The One You Can Always Count On..++</i></h2>
       </div>
       <div>
-        <form action="#" class="ml-5 mr-5 pt-5" style="margin-top: -40px;" >
+        <form action="#" class="ml-5 mr-5 pt-5" style="margin-top: -60px;" >
           <div class="row mb-5 ">
 
             <div class="col-lg-4 a">
@@ -112,13 +113,38 @@
                 <input type="number" class="form-control" id="kg" placeholder="Enter Weight in KG">
               </div>
               <div class="input-group mb-3">
-                <a  class="btn btn-block btn" id="inlineFormInputGroup" value="">CALCULATE FARE</a>
+                <a  class="btn btn-block btn" id="inlineFormInputGroup" data-toggle="modal" data-target="#myModal" value="">CALCULATE FARE</a>
               </div>
-              <div class="input-group mb-3 res a" >
-                <span id="res"></span><br>
+
+              <!-- <div class="input-group mb-3 res a" >
+                <span id="res"></span><br> -->
+              <!--------Modal Part---->
+              
                
-                
-              </div>
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title" style="color: red;"><strong>Trip Detail:</strong></h4>
+      </div>
+      <div class="modal-body">
+        
+        
+          <span id="res"></span>
+    
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+              <!--- ---------------------------------> 
+              
 
             </div>
           </div>
@@ -126,36 +152,40 @@
       </div>
     </div>
   </section>
-  <!-- <div class="container-fluid">
+  <footer>
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-4 text-center">
-        <div class="row">
-          <div class="col-sm-4"><i class="fa fa-taxi" style="font-size:50px;color:rgb(10, 10, 10);" aria-hidden="true"></i></div>
-          <div class="col-sm-4"><i class="fab fa-bike" style="font-size:50px;color:rgb(10, 10, 10);"></i></div>
-          <div class="col-sm-4"><i class="fab fa-car" style="font-size:50px;color:rgb(10, 10, 10);"></i></div>
+      <div class="col-sm-4 text-center" style="margin-top:10px;">
+        <div class="row" style="padding-top: 1.5%;">
+          <div class="col-sm-2"><i class="fab fa-instagram" style="font-size:50px;color:white;" aria-hidden="true"></i></div>
+          <div class="col-sm-2"><i class="fab fa-facebook-square" style="font-size:50px;color:#fff;" aria-hidden="true"></i></div>
+          <div class="col-sm-2"><i class="fab fa-linkedin" style="font-size:50px;color:#fff;"aria-hidden="true"></i></div>
         </div>
       </div>
-      <div class="col-sm-4 text-center">
-        <p>COPYRIGHT@</p>
+      <div class="col-sm-4 text-center" style="color: white;">
+        <h5><i>Ced_Cab</i></h5>
+    <h5><i>@Prince.Kr.yadav</i></h5>
         
       </div>
       <div class="col-sm-4 text-center">
         <div class="row">
-          <div class="col-sm-4"><a href="#">Features</a></div>
-          <div class="col-sm-4"><a href="#">Reviews</a></div>
-          <div class="col-sm-4"><a href="#">Sign-up</a></div>
+          <div class="col-sm-4"><a href="#">@Features</a></div>
+          <div class="col-sm-4"><a href="#">@Reviews</a></div>
+          <div class="col-sm-4"><a href="#">@Sign-up</a></div>
         </div>
       </div>
     </div>
-  </div> -->
-  <footer>
+  </div>
+  </footer>
+  <!-- <!-- <footer>
   <div class="container-fluid" style="height: auto;">
       <div class="row">
           
-          <div class="col-4 icon-color" style="padding-top: 20px;">
-              <i class="fa fa-instagram-square"  style="font-size:50px;color: white;" aria-hidden="true"></i>
-              <i class="fa fa-facebook-square"  style="font-size:50px;color: white;" aria-hidden="true"></i>
-              <i class="fa fa-twitter-squares"  style="font-size:50px;color: white;"></i>
+          <div class="col-sm-4 text-center" style="padding-top: 20px;">
+            <i class="fa fa-instagram" aria-hidden="true"  style="font-size:25px"></i>
+            <i class="fa fa-facebook-square" aria-hidden="true"  style="font-size:25px"></i>
+            <i class="fa fa-linkedin-square" aria-hidden="true" style="font-size:25px" ></i>
+ 
              
           </div>
           <div class="col-4 text-center">
@@ -168,15 +198,15 @@
               
         
           </div>
-          <!-- <div class="col-sm-4 text-center" style="padding-top: 20px;">
+           <div class="col-sm-4 text-center" style="padding-top: 20px;">
             <i class="fa fa-instagram"           style="font-size:50px" aria-hidden="true"></i>
             <i class="fa fa-facebook-square"  style="font-size:50px" aria-hidden="true"></i>
             <i class="fa fa-twitter-square"  style="font-size:50px" aria-hidden="true"></i>
             <i class="fa fa-linkedin-square"   style="font-size:50px" aria-hidden="true"></i>
-          </div> -->
+          </div>
       </div>
     
   </div> 
-</footer>
+</footer>  --->
 </body>
 </html>
