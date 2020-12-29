@@ -1,15 +1,18 @@
 $(document).ready(function () {
     var xml;
     var pick="cu";
-    var drop="cu";
+     var drop="cu";
     var cab="cu";
     var kg=0;
       var cab;
       $("#pick").change(function(){
           pick=$(this).val();
+
+          
         }); 
         $("#drop").change(function(){
           drop=$(this).val();
+         // $("#drop option[value*='" + drop+ "']").prop('disabled', true);
         });
         $("#cab").change(function(){
           cab=$(this).val();
@@ -24,30 +27,37 @@ $(document).ready(function () {
           kg=$(this).val();
           
         });
+        $("#pick").change(function(){
+          $("#drop option[value*='" + pick+ "']").hide();
+        });
+
         
-    
+        //$("#drop option[value*='" + pick+ "']").prop('disabled', false);
+        
+        
     
         
         
        $(".btn").click(function () {
+         
         if(pick==drop){
-            alert("Please select pickup and drop location distinct!");
-           //$("#res").html("<p style='color:red;'>Please select pickup and drop location distinct!</p>"); 
+            //alert("Please select pickup and drop location distinct!");
+           $("#res").html("<p style='color:red;'>Please select pickup and drop location distinct!</p>"); 
           return;
       }
         if(pick=='cu'){
-            alert("Please Select Pickup location!");
-        // $('#res').html("<p style='color:red;'>Please Select Pickup location!</p>");
+           // alert("Please Select Pickup location!");
+        $('#res').html("<p style='color:red;'>Please Select Pickup location!</p>");
             return;
         }
         if(drop=='cu'){
-            alert("Please Select Drop location!");
-         //$('#res').html("<p style='color:red;'>Please Select Drop location!</p>");
+          // alert("Please Select Drop location!");
+         $('#res').html("<p style='color:red;'>Please Select Drop location!</p>");
           return;
       }
       if(cab=='cu'){
-        alert("Please Select the Cab!");
-       // $('#res').html("<p style='color:red;'>Please Select cab first!</p>");
+       // alert("Please Select the Cab!");
+       $('#res').html("<p style='color:red;'>Please Select cab first!</p>");
         return;
     }
     
@@ -64,8 +74,9 @@ $(document).ready(function () {
               },
               success: function (result) {
                 
-               alert(result);
-                  //$("#res").modal(result);
+               //alert(result);
+                  $("#res").html(result);
+                 // $("#drop option[value*='" + pick+ "']").prop('hide', false);
 
                   
 
