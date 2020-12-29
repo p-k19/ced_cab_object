@@ -80,9 +80,9 @@ input[type=number]
     }
     @media only screen and (max-width:768px)
     {
-        .on
+        /*.on*/
         {
-            display:none
+           /* display:none*/
         }
     }
     .res
@@ -93,5 +93,10 @@ input[type=number]
     }
     footer{
         background-color:black;
+     
+        
+    }
+    html{
+        overflow-x: hidden;
     }
     
