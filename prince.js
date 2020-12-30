@@ -18,21 +18,41 @@ $(document).ready(function () {
           cab=$(this).val();
           
           if(cab=="CedMicro"){
-              $("#kg").prop('disabled',true);
+            
+              $("#kg").hide();
           } else {  
-              $("#kg").prop('disabled',false);
+              $("#kg").show();
+              $("#kg").val("No Luggage Service");                                            
           }
-        });
-        $("#kg").change(function(){
-          kg=$(this).val();
-          
-        });
-        $("#pick").change(function(){
-          $("#drop option[value*='" + pick+ "']").hide();
         });
 
         
-        //$("#drop option[value*='" + pick+ "']").prop('disabled', false);
+        $("#kg").change(function(){
+          kg=$(this).val();
+          
+          
+        });
+
+
+        
+        
+        $("#pick").change(function(){
+          $("#drop option").prop('disabled',false);
+          $('#drop option[value="' + $("#pick").val() + '"]').prop('disabled', 'disabled');
+        });
+        $('#drop').change(function () {
+          $('#pick option').prop('disabled', false);
+          $('#pick option[value="' + $("#drop").val() + '"]').prop('disabled', 'disabled');
+      });
+
+
+
+
+  
+
+
+        
+    
         
         
     
@@ -42,7 +62,7 @@ $(document).ready(function () {
          
         if(pick==drop){
             //alert("Please select pickup and drop location distinct!");
-           $("#res").html("<p style='color:red;'>Please select pickup and drop location distinct!</p>"); 
+           $("#res").html("<p style='color:red;'>Please select pickup and drop location!</p>"); 
           return;
       }
         if(pick=='cu'){
@@ -58,6 +78,8 @@ $(document).ready(function () {
       if(cab=='cu'){
        // alert("Please Select the Cab!");
        $('#res').html("<p style='color:red;'>Please Select cab first!</p>");
+       
+       
         return;
     }
     
@@ -76,7 +98,7 @@ $(document).ready(function () {
                 
                //alert(result);
                   $("#res").html(result);
-                 // $("#drop option[value*='" + pick+ "']").prop('hide', false);
+                  //$("#drop option[value*='" + pick+ "']").show();
 
                   
 
@@ -84,3 +106,4 @@ $(document).ready(function () {
           });
         });
       });
+      
