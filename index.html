@@ -13,7 +13,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <link rel="stylesheet" type="text/css" href="prince.css">
   <script src="prince.js"></script>
-  <title>BOOK A RIDE</title>
+  <title>Cab++</title>
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 
@@ -68,7 +68,7 @@
                 <div class="input-group-prepend">
                   <div class="input-group-text ">Pickup</div>
                 </div>
-                <select class="form-control " id="pick">
+                <select class="form-control " id="pick" style="width:auto;">
                   <option selected value="cu">Pickup-location</option>
                   <option value="Charbagh">Charbagh</option>
                   <option value="Indira Nagar">Indira Nagar </option>
@@ -83,7 +83,7 @@
                 <div class="input-group-prepend">
                   <div class="input-group-text ">DROP</div>
                 </div>
-                <select class="form-control " id="drop">
+                <select class="form-control " id="drop" style="width:auto;">
                   <option selected value="cu">Drop-location</option>
                   <option value="Charbagh">Charbagh</option>
                   <option value="Indira Nagar">Indira Nagar </option>
@@ -98,7 +98,7 @@
                 <div class="input-group-prepend">
                   <div class="input-group-text ">CAB-TYPE</div>
                 </div>
-                <select class="form-control " id="cab">
+                <select class="form-control " id="cab" style="width:auto;" >
                   <option value="cu">Choose your cab</option>
                   <option value="CedMicro">CedMicro</option>
                   <option value="CedMini">CedMini </option>
@@ -110,7 +110,10 @@
                 <div class="input-group-prepend">
                   <div class="input-group-text ">Luggage</div>
                 </div>
-                <input type="number" class="form-control" id="kg" placeholder="Enter Weight in KG">
+                <input type="number" ondrag="false" ondrop="false" onKeyPress="if(this.value.length==20) return false;"   
+                oninput="this.value = Math.abs(float(this.value))"
+                class="form-control-plaintext col-sm-9 arrow"
+                    id="kg" placeholder="Enter weight in KG">
               </div>
               <div class="input-group mb-3">
                 <a  class="btn btn-block btn" id="inlineFormInputGroup" data-toggle="modal" data-target="#myModal" value="">CALCULATE FARE</a>
@@ -137,7 +140,8 @@
           <span id="res"></span>
     
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Book</button>
       </div>
     </div>
 
@@ -155,11 +159,11 @@
   <footer>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-4 text-center" style="margin-top:10px;">
-        <div class="row" style="padding-top: 1.5%;">
-          <div class="col-sm-2"><i class="fab fa-instagram" style="font-size:50px;color:white;" aria-hidden="true"></i></div>
-          <div class="col-sm-2"><i class="fab fa-facebook-square" style="font-size:50px;color:#fff;" aria-hidden="true"></i></div>
-          <div class="col-sm-2"><i class="fab fa-linkedin" style="font-size:50px;color:#fff;"aria-hidden="true"></i></div>
+      <div class="col-sm-4 text-center" style="margin-top:25px;">
+        <div class="row">
+          <div class="col-sm-4"><i class="fab fa-instagram d-inline" style="font-size:50px;color:white;" aria-hidden="true"></i></div>
+          <div class="col-sm-4"><i class="fab fa-facebook-square d-inline" style="font-size:50px;color:#fff;" aria-hidden="true"></i></div>
+          <div class="col-sm-4"><i class="fab fa-linkedin d-inline" style="font-size:50px;color:#fff;"aria-hidden="true"></i></div>
         </div>
       </div>
       <div class="col-sm-4 text-center" style="color: white;">
@@ -177,7 +181,7 @@
     </div>
   </div>
   </footer>
-  <!-- <!-- <footer>
+  <!--  <footer>
   <div class="container-fluid" style="height: auto;">
       <div class="row">
           
@@ -208,5 +212,6 @@
     
   </div> 
 </footer>  --->
+
 </body>
 </html>
