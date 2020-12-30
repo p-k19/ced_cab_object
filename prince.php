@@ -6,6 +6,7 @@
  $this->pick1=$pick;
  $this->drop1=$drop;
  $this->cab1=$cab;
+ ;
  
     echo"\n<strong>PickUp:</strong>".$pick."<br>"; 
     echo"\n<strong>Drop:</strong>".$drop."<br>"; 
@@ -90,13 +91,13 @@ else {
                  $fixed+=($distance*13.50);
             } elseif ($distance>10 && $distance<=50) {
                 $fixed+=(10*13.50);
-                $distance-=10;//This will deduct the first 10km and rest fare  will be calculated on rest km 
+                $distance-=10;        //This will deduct the first 10km and rest fare  will be calculated on rest km 
                 $fixed+=($distance*12.00);
             } elseif ($distance>50 && $distance<=150) {
                 $fixed+=(10*13.50);
-                $distance-=10;//This will deduct the first 10km and rest fare  will be calculated on rest km 
+                $distance-=10;        //This will deduct the first 10km and rest fare  will be calculated on rest km 
                 $fixed+=(50*12.00);
-                $distance-=50;//This will deduct the first 10km and 50km and rest fare  will be calculated on rest km 
+                $distance-=50;       //This will deduct the first 10km and 50km and rest fare  will be calculated on rest km 
                 $fixed+=($distance*10.20);
     
             } elseif ($distance>150) {
@@ -110,7 +111,7 @@ else {
                 
             }
             $obj5=new cedcab();
-            $obj5->display($fixed, $cost);
+            $obj5->display($fixed, $cost,$kg='0');
         }
 
     
@@ -152,7 +153,7 @@ else {
             
         }
         $obj4=new cedcab();
-        $obj4->display($fixed, $cost);
+        $obj4->display($fixed, $cost,$kg);
     }
 
 
@@ -193,7 +194,7 @@ else {
             
         }
         $obj2=new cedcab();
-        $obj2->display($fixed, $cost);
+        $obj2->display($fixed, $cost,$kg);
     }
     
 
@@ -235,16 +236,16 @@ else {
             
         }
         $obj3=new cedcab();
-        $obj3->display($fixed, $cost);
+        $obj3->display($fixed, $cost,$kg);
     }
 
     
     
-    function display($fixed,$cost)  //Calling function for displaying cost and distance
+    function display($fixed,$cost,$kg)  //Calling function for displaying cost and distance
     {
          $cost=(int)$cost+(int)$fixed;
 
-             
+        echo "\n<strong>Luggage:</strong>".$kg."KG <br>";     
         echo "\n<strong>Total Fare:</strong>"."Rs".$cost;
     }
     
@@ -253,6 +254,7 @@ else {
          $pick=$_REQUEST['pick'];                                    
          $drop=$_REQUEST['drop'];               
          $cab=$_REQUEST['cab']; 
+        
       $obj=new cedcab();
     $obj->f1($pick,$drop,$cab);
     
