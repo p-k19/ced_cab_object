@@ -16,13 +16,20 @@ $(document).ready(function () {
         });
         $("#cab").change(function(){
           cab=$(this).val();
-          
           if(cab=="CedMicro"){
             
-              $("#kg").hide();
-          } else {  
-              $("#kg").show();
-              $("#kg").val("No Luggage Service");                                            
+                 $("#kg").val("");
+              $("#kg").prop('placeholder','No Luggage Service');
+              $("#kg").prop('disabled',true);
+             
+          } else { 
+        
+            $("#kg").attr('placeholder','Enter weight in KG');
+              $("#kg").prop('disabled',false);
+              
+
+              
+             // $("#kg").val("No Luggage Service");                                            
           }
         });
 
