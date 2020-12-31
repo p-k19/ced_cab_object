@@ -14,7 +14,7 @@
   <link rel="stylesheet" type="text/css" href="prince.css">
   <script src="prince.js"></script>
   <title>Cab++</title>
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  
 </head>
 
 <body>
@@ -25,7 +25,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse navbar-dark  " id="myNavbar">
-      <ul class="navbar-nav ml-auto mr-3 ht text-left">
+      <ul class="navbar-nav ml-auto mr-3 ht text-center">
         <li class="nav-item">
             <a class="nav-link pt-3 " style="color:yellow;" href="#">HOME</a>
           </li>
@@ -68,7 +68,7 @@
                 <div class="input-group-prepend">
                   <div class="input-group-text ">Pickup</div>
                 </div>
-                <select class="form-control " id="pick" style="width:auto;">
+                <select class="form-control " id="pick" style="width:auto;" id='f1(this)'>
                   <option selected value="cu">Pickup-location</option>
                   <option value="Charbagh">Charbagh</option>
                   <option value="Indira Nagar">Indira Nagar </option>
@@ -83,7 +83,7 @@
                 <div class="input-group-prepend">
                   <div class="input-group-text ">DROP</div>
                 </div>
-                <select class="form-control " id="drop" style="width:auto;">
+                <select class="form-control " id="drop" style="width:auto;" id='f1(this)'>
                   <option selected value="cu">Drop-location</option>
                   <option value="Charbagh">Charbagh</option>
                   <option value="Indira Nagar">Indira Nagar </option>
@@ -98,7 +98,7 @@
                 <div class="input-group-prepend">
                   <div class="input-group-text ">CAB-TYPE</div>
                 </div>
-                <select class="form-control " id="cab" style="width:auto;" >
+                <select class="form-control " id="cab" style="width:auto;" id='f1(this)'>
                   <option value="cu">Choose your cab</option>
                   <option value="CedMicro">CedMicro</option>
                   <option value="CedMini">CedMini </option>
@@ -113,7 +113,7 @@
                 <input type="number" ondrag="false" ondrop="false" onKeyPress="if(this.value.length==20) return false;"   
                 oninput="this.value = Math.abs(float(this.value))"
                 class="form-control-plaintext col-sm-9 arrow"
-                    id="kg" placeholder="Enter weight in KG">
+                    id="kg" placeholder="Enter weight in KG" id='f1(this)'>
               </div>
               <div class="input-group mb-3">
                 <a  class="btn btn-block btn" id="inlineFormInputGroup" data-toggle="modal" data-target="#myModal" value="">CALCULATE FARE</a>
@@ -212,6 +212,12 @@
     
   </div> 
 </footer>  --->
+    <script>
+      function f1(x)
+      {
+        x.style.background="lightgrey";
+      }
+    </script>
 
 </body>
 </html>
