@@ -68,7 +68,7 @@
                 <div class="input-group-prepend">
                   <div class="input-group-text ">Pickup</div>
                 </div>
-                <select class="form-control " id="pick" style="width:auto;" id='f1(this)'>
+                <select class="form-control " id="pick" style="width:auto;" onfocus='f1(this)'>
                   <option selected value="cu">Pickup-location</option>
                   <option value="Charbagh">Charbagh</option>
                   <option value="Indira Nagar">Indira Nagar </option>
@@ -83,7 +83,7 @@
                 <div class="input-group-prepend">
                   <div class="input-group-text ">DROP</div>
                 </div>
-                <select class="form-control " id="drop" style="width:auto;" id='f1(this)'>
+                <select class="form-control " id="drop" style="width:auto;" onfocus='f1(this)'>
                   <option selected value="cu">Drop-location</option>
                   <option value="Charbagh">Charbagh</option>
                   <option value="Indira Nagar">Indira Nagar </option>
@@ -98,7 +98,7 @@
                 <div class="input-group-prepend">
                   <div class="input-group-text ">CAB-TYPE</div>
                 </div>
-                <select class="form-control " id="cab" style="width:auto;" id='f1(this)'>
+                <select class="form-control " id="cab" style="width:auto;" onfocus='f1(this)'>
                   <option value="cu">Choose your cab</option>
                   <option value="CedMicro">CedMicro</option>
                   <option value="CedMini">CedMini </option>
@@ -113,7 +113,7 @@
                 <input type="number" ondrag="false" ondrop="false" onKeyPress="if(this.value.length==20) return false;"   
                 oninput="this.value = Math.abs(float(this.value))"
                 class="form-control-plaintext col-sm-9 arrow"
-                    id="kg" placeholder="Enter weight in KG" id='f1(this)'>
+                    id="kg" placeholder="Enter weight in KG" onfocus='f1(this)'>
               </div>
               <div class="input-group mb-3">
                 <a  class="btn btn-block btn" id="inlineFormInputGroup" data-toggle="modal" data-target="#myModal" value="">CALCULATE FARE</a>
